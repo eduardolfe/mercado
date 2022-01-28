@@ -1,52 +1,34 @@
 import styled from "styled-components";
-export const ContainerProducts = styled.div`
+
+export const Content = styled.div`
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+`;
+
+export const ProductList = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 7%;
-    
+    margin: 30px;
+    padding: 0 20px;
 `;
 
-export const BananaContainer = styled.div`
-    border: 1px solid black;
-    background-color: silver;
-    padding: 5%;
+export const Product = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    width: 350px;
+    height: 350px;
+    background-color: ghostwhite;
+    box-shadow: 3px 3px 2px grey;
+    img{
+        height:200px;
+        width:200px;
+    }
 `;
 
-export const BananaImage = styled.img`
-    width: 20vw;
-    height: 20vh;
-`;
-
-export const BananaInfo = styled.h3`
-    
-`;
-
-export const EscadaContainer = styled.div`
-    border: 1px solid black;
-    background-color: silver;
-    padding: 5%;
-`;
-
-export const EscadaImage = styled.img`
-    width: 20vw;
-    height: 20vh;
-`;
-
-export const EscadaInfo = styled.h3`
-
-`;
-
-export const VassouraContainer = styled.div`
-    border: 1px solid black;
-    background-color: silver;
-    padding: 5%;
-`;
-
-export const VassouraImage = styled.img`
-
-`;
-
-export const VassouraInfo = styled.h3`
-
-`;

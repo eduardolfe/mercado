@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const MenuItem = styled.div`
-    height: 5vh;
-    cursor: pointer;
-    &:hover{
-        color: white;
-    }
+    display: flex;
+    margin-top: 15px;
+    gap: 20px;
+a{
+    
+    text-decoration: none;
+    color: white;
+    font-weight: 2px;
+}
 `;
 
 export const Head = styled.header`

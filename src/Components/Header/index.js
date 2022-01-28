@@ -1,23 +1,24 @@
 import React from "react";
-import {AiFillHome,AiFillApple,AiFillTool} from "react-icons/ai";
-import {GiWaterBottle} from "react-icons/gi";
-import {MdCleaningServices} from "react-icons/md";
+import {Link} from "react-router-dom";
+import {AiFillHome} from "react-icons/ai";
+import {GiForkKnifeSpoon} from "react-icons/gi";
 import { Head, HeaderMenu, HeaderName, MenuItem } from "./styles";
+
 
 export default function Header() {
     const itensMenu = [
-        {nome: "Menu" , icone: <AiFillHome/>},
-        {nome: "Alimentos" , icone: <AiFillApple/>},
-        {nome: "Bebidas" , icone: <GiWaterBottle/>},
-        {nome: "Limpeza" , icone: <MdCleaningServices/>},
-        {nome: "Construção" , icone: <AiFillTool/>},
+        {nome: "Menu" , icone: <AiFillHome/>, path: "/"},
+        {nome:  "Restaurante" , icone: <GiForkKnifeSpoon/>, path:"/restaurante"},
+        
 
     ];
 
     const renderList = itensMenu.map((item, index) => (
         <MenuItem key={index}>
-            {item.icone}
-            {item.nome}
+            <Link to={item.path}>
+                {item.nome}   
+                {item.icone}
+            </Link>
         </MenuItem>
     ));
 

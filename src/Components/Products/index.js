@@ -1,27 +1,46 @@
-import React from "react";
-import { BananaContainer, BananaImage, BananaInfo, ContainerProducts, EscadaContainer, EscadaImage, EscadaInfo, VassouraContainer, VassouraImage, VassouraInfo } from "./styles";
-import "../../Images/banana.jpeg";
-export default function Products() {
-    return(
-        <ContainerProducts>
-            <BananaContainer>
-                <BananaImage src='../../Images/banana.jpeg' alt='Foto da Banana'/>
-                <BananaInfo>
-                <h3>Banana Prata </h3>
-                </BananaInfo>
-            </BananaContainer>
-            <EscadaContainer>
-                <EscadaImage src='../../Images/escada.webp' alt='Foto da Banana'/>
-                <EscadaInfo>
-                    <h3>Escada de Alumínio</h3>
-                </EscadaInfo>
-            </EscadaContainer>
-            <VassouraContainer>
-                <VassouraImage src='./Images/vassoura.webp' alt='Foto da Vassoura'/>
-                <VassouraInfo>
-                    <h3>Ola vassoura</h3>
-                </VassouraInfo>
-            </VassouraContainer>
-        </ContainerProducts>
-    );
+import React from 'react';
+import {Content, Product, ProductList} from './styles';
+export default function Products (){
+    const products = [
+        {
+            id: 1,
+            name: 'Banana Unidade',
+            price: 'Preço: R$ 0,85',
+            image: "https://cdn.octoshop.com.br/lojas/padellasaobenedito/uploads_produto/banana-terra-600x600-5ecd606449181.png"
+        },
+        {
+            id: 2,
+            name: 'Escada de Alumínio',
+            price: 'Preço: R$ 129,90',
+            image: "https://cdnv2.moovin.com.br/amerika/imagens/produtos/det/c8ba9e73c4a85b2e9355b88e8bb4d5ae.jpg"
+        },
+        {
+            id: 3,
+            name: 'Pão Francês Unidade',
+            price: 'Preço: R$ 1,30',
+            image: "https://assets.instabuy.com.br/ib.item.image.big/b-25dee6c5888e4631ae23f43aa9a0b5bf.png"
+        },
+        {
+            id: 4,
+            name: 'Kit Churrasco',
+            price: 'Preço: R$ 93,90 ',
+            image: "https://www.principado.com.br/arquivos/empresas/19/produto/conjunto_churrasco_tradicional_12295.jpg"
+        }
+    ]
+    return(<div>
+        <Content>
+            <ProductList>
+                {
+                    products.map((product => (
+                        <Product>
+                            <h2>{product.name}</h2>
+                            <img src={product.image}/>
+                            <p>{product.price}</p>
+                        </Product>
+                        
+                    )))
+                }
+            </ProductList>
+        </Content>
+    </div>);
 }

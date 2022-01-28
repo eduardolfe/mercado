@@ -45,11 +45,11 @@ export default function Main() {
 
     return (
         <Container>
-            <ContainerName>Mercado</ContainerName>
+            <ContainerName>Carrinho</ContainerName>
             <ContainerContent>
                 <MarketList>
                     <Input
-                        placeholder="Nome"
+                        placeholder="Produto"
                         value={name}
                         onChange={(event) => setName(event.currentTarget.value)} 
                     />
@@ -63,7 +63,7 @@ export default function Main() {
                         <QuantityButton onClick={Increment}>+</QuantityButton>
                         <QuantityButton onClick={Decrement}>-</QuantityButton>
                     </QuantityInput>
-                    <ResetButton onClick={Reset} disabled={!available} >Reset</ResetButton>
+                    <ResetButton onClick={Reset} disabled={!available} >Adicionar</ResetButton>
                 </MarketList>
             </ContainerContent>
         </Container>

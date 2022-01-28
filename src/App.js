@@ -1,16 +1,19 @@
-import './App.css';
-import Header from './Components/Header';
-import Main from './Components/Main';
-import Products from './Components/Products';
-import "./Images/banana.jpeg";
+import { AppRoutes } from './Routes';
 import { Page } from './styles';
+import './App.css';
+{/*import Home from './Pages/Home';
+import Products from './Pages/Products';*/}
+
+
 
 function App() {
   return (
     <Page>
-      <Header/>
+      {/*<Header/>
       <Main/>
-      <Products/>
+      <Products/>*/}
+      <AppRoutes/>
+      {/*<Products/>*/}
     </Page>
   );
 }
